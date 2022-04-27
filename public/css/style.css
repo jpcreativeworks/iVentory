@@ -1,0 +1,27 @@
+body {
+    margin-left: -150px;
+}
+
+.text {
+    margin-left: 40px;
+    font-size: 32px;
+    font-weight: 400;
+    color: white;
+}
+
+.containerz {
+    margin-top: 220px;
+}
+
+.box {
+    position: absolute;
+}
+
+img {
+    width: 1100px;
+    height: auto;
+}
+
+.text-color {
+    color: white;
+}
