@@ -1,27 +1,26 @@
 body {
-    margin-left: -150px;
+    margin-left: 90px;
+    position: fixed;
 }
-
 .text {
     margin-left: 40px;
     font-size: 32px;
     font-weight: 400;
     color: white;
 }
-
 .containerz {
-    margin-top: 220px;
+    margin-top: 175px;
 }
-
 .box {
     position: absolute;
 }
-
 img {
     width: 1100px;
     height: auto;
-}
-
-.text-color {
-    color: white;
+  }
+  .text-color {
+      color: white;
+  }
+.btn {
+    margin-left: 100px;
 }
