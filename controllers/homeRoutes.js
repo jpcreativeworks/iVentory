@@ -2,7 +2,7 @@ const router = require('express').Router();
 const { Episodic, Inventory, User } = require('../models');
 const withAuth = require('../utils/auth');
 
-router.get('/', async (req, res) => {
+router.get('/', async (req, res) => { //pass
   try {
     // Get all projects and JOIN with user data
     const episodicData = await Episodic.findAll({
@@ -14,7 +14,7 @@ router.get('/', async (req, res) => {
       ],
     });
 
-    // Serialize data so the template can read it
+    // Serialize data so the template can read it, fetching it orm
     const episodics = episodicData.map((episodic) => Episodic.get({ plain: true }));
 
     // Pass serialized data and session flag into template

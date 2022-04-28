@@ -2,15 +2,20 @@ const router = require('express').Router();
 const { Episodic } = require('../../models');
 const withAuth = require('../../utils/auth');
 
+router.post('/bla', (req,res)=>{
+  res.status(200).json({"Bla":"bla"});
+});
+
 router.post('/', withAuth, async (req, res) => {
   try {
     const newEpisodic = await Episodic.create({
       ...req.body,
-      user_id: req.session.user_id,
+      user_id: req.session.user_id
     });
 
     res.status(200).json(newEpisodic);
   } catch (err) {
+    console.log(err);
     res.status(400).json(err);
   }
 });
