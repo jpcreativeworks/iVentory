@@ -9,7 +9,7 @@ body {
     color: white;
 }
 .containerz {
-    margin-top: 175px;
+    margin-top: 160px;
 }
 .box {
     position: absolute;
@@ -23,4 +23,7 @@ img {
   }
 .btn {
     margin-left: 100px;
+}
+.btn2 {
+    margin-top: 90px;
 }
