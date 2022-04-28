@@ -3,28 +3,28 @@ const { Episodic, Inventory, User } = require('../models');
 const withAuth = require('../utils/auth');
 
 router.get('/', async (req, res) => { //pass
-  try {
-    // Get all projects and JOIN with user data
-    const episodicData = await Episodic.findAll({
-      include: [
-        {
-          model: User,
-          attributes: ['name'],
-        },
-      ],
-    });
+  // try {
+  //   // Get all projects and JOIN with user data
+  //   const episodicData = await Episodic.findAll({
+  //     include: [
+  //       {
+  //         model: User,
+  //         attributes: ['name'],
+  //       },
+  //     ],
+  //   });
 
-    // Serialize data so the template can read it, fetching it orm
-    const episodics = episodicData.map((episodic) => Episodic.get({ plain: true }));
+  //   // Serialize data so the template can read it, fetching it orm
+  //   const episodics = episodicData.map((episodic) => Episodic.get({ plain: true }));
 
     // Pass serialized data and session flag into template
-    res.render('account', { 
-      episodics, 
-      logged_in: req.session.logged_in 
+    res.render('login', { 
+      // episodics, 
+      // logged_in: req.session.logged_in 
     });
-  } catch (err) {
-    res.status(500).json(err);
-  }
+  // } catch (err) {
+  //   res.status(500).json(err);
+  // });
 });
 
 router.get('/episodic/:id', async (req, res) => {
