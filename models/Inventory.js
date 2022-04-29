@@ -1,64 +1,60 @@
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
-
+// create inventory model
 class Inventory extends Model {}
-
+//crreate fields/columns for inventory model
 Inventory.init(
   {
     id: {
       type: DataTypes.INTEGER,
       allowNull: false,
       primaryKey: true,
-      autoIncrement: true,
+      autoIncrement: true
     },
-    item_title: {
+    acct_code_set_description: {
       type: DataTypes.STRING,
-      allowNull: false,
+      allowNull: false
     },
-    quantity: {
+    company: {
         type: DataTypes.INTEGER,
-        allowNull: false,
+        allowNull: false,        
     },
-    cost_of_item: {
-        type: DataTypes.FLOAT,
-        allowNull: false,
+    ref_number: {
+        type: DataTypes.INTEGER,
+        allowNull: false,    
     },
-    date_created: {
-        type: DataTypes.DATE,
-        allowNull: false,
-        defaultValue: DataTypes.NOW,
-    },
-    return_date: {
-        type: DataTypes.DATE,
-        allowNull: false,
-        defaultValue: DataTypes.NOW, //? 
-    },
-    location: {
+    date: { //? imputted as a SHORT DATE may need to interpret to YYYY/MM/DD
         type: DataTypes.STRING,
-        allowNull: false,
+        allowNull:false
     },
-    episodic_id: {
-        type: DataTypes.INTEGER,
-        references: {
-          model: 'episodic',
-          key: 'id',
-        },
+    vendor_employee: {
+        type: DataTypes.STRING,
+        allowNull: false
     },
-    user_id: {
+    FF2: { //needs to have a LP and a TAX difference 
+        type: DataTypes.STRING,
+        allowNull: false     
+    },
+    standardized_reclamation_cost_estimator: {
+        type: DataTypes.STRING,
+        allowNull: false   
+    },
+    item_description: {
+        type: DataTypes.STRING,
+        allowNull: false
+    },
+    amount: {
         type: DataTypes.INTEGER,
-        references: {
-          model: 'user',
-          key: 'id',
-        },
+        allowNull: false, 
     },
   },
-  {
-    sequelize,
-    timestamps: false,
-    freezeTableName: true,
-    underscored: true,
-    modelName: 'inventory',
-  }
+    {
+        sequelize,
+        timestamps: false,
+        freezeTableName: true,
+        underscored: true,
+        modelName: 'Warehouses'
+    }
 );
 
 module.exports = Inventory;
