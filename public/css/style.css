@@ -1,15 +1,15 @@
 img {
     width: 1000px;
     height: auto;
+    position: absolute;
 }
 .container {
-    display: flex;  
-    flex-direction: row;
+    display: flex; 
+    width: 100px; 
 }
 .outer-container {
 display: flex;
 flex-direction: row;
 flex-wrap: wrap;
-justify-content: space-between;
 list-style: none;
 }
