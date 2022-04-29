@@ -1,5 +1,6 @@
 const path = require('path');
-const sequelize = require('./config/connection');const express = require("express");
+const sequelize = require('./config/connection');
+const express = require("express");
 const app = express();
 const PORT = process.env.PORT || 8080;
 const controllers = require('./controllers');
