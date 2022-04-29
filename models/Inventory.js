@@ -11,39 +11,35 @@ Inventory.init(
       primaryKey: true,
       autoIncrement: true
     },
-    acct_code_set_description: {
-      type: DataTypes.STRING,
-      allowNull: false
-    },
-    company: {
+    episodic_id: {
         type: DataTypes.INTEGER,
         allowNull: false,        
     },
-    ref_number: {
+    user_id: {
         type: DataTypes.INTEGER,
         allowNull: false,    
     },
-    date: { //? imputted as a SHORT DATE may need to interpret to YYYY/MM/DD
+    return_date: { //? imputted as a SHORT DATE may need to interpret to YYYY/MM/DD
         type: DataTypes.STRING,
         allowNull:false
     },
-    vendor_employee: {
+    date_created: {
+      type: DataTypes.STRING,
+        allowNull:false
+    },
+    location: {
         type: DataTypes.STRING,
         allowNull: false
     },
-    FF2: { //needs to have a LP and a TAX difference 
-        type: DataTypes.STRING,
-        allowNull: false     
+    cost_of_item: {
+      type: DataTypes.INTEGER,
+      allowNull: false, 
     },
-    standardized_reclamation_cost_estimator: {
-        type: DataTypes.STRING,
-        allowNull: false   
-    },
-    item_description: {
+    item_title: {
         type: DataTypes.STRING,
         allowNull: false
     },
-    amount: {
+    quantity: {
         type: DataTypes.INTEGER,
         allowNull: false, 
     },
@@ -53,7 +49,7 @@ Inventory.init(
         timestamps: false,
         freezeTableName: true,
         underscored: true,
-        modelName: 'Warehouses'
+        modelName: 'inventory'
     }
 );
 
