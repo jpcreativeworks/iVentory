@@ -31,5 +31,5 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use(controllers);
 sequelize.sync({ force: false }).then(() => {
-    app.listen(PORT, () => console.log("Server Listening on Port 8080. Type Command C or Ctrl C to quit"));    
+    app.listen(PORT, () => console.log("Server Listening at http://localhost:${PORT} 🚀. Type Command C or Ctrl C to quit"));    
 }).catch(err => console.log(err));
