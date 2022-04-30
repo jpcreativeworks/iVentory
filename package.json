@@ -26,6 +26,8 @@
     "express-session": "^1.17.1",
     "json2csv": "^5.0.7",
     "mysql2": "^2.2.5",
+    "nodemailer": "^6.7.4",
+    "nodemailer-smtp-transport": "^2.7.4",
     "nodemon": "^2.0.16",
     "sequelize": "^6.19.0"
   },
