@@ -11,39 +11,23 @@
     <link rel="stylesheet" href="./style.css" />
 </head>
 
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>iVentory</title>
-    <link rel="stylesheet" href="./style.css" />
-</head>
-
 <body>
-    <header>
-        <div></div>
-        <nav>
-            <a>iVentory</a>
-            <a href="#">Register</a>
-            <a href="#">Home</a>
-        </nav>
-        </div>
-    </header>
-        <header>
+        <header class="navbar">
             <!-- Need to change and link correctly-->
-            {{!-- <h1>
-                <a href="/">iVentory</a>
-            </h1> --}}
+                {{!-- <a href="/">iVentory</a> --}}
+
+
             <nav>
+                <a>iVentory</a>
+                <a href="/register">Register</a>
+                <a href="/login">Home</a>
+
                 <!-- Conditionally render login or logout links -->
                 {{#if logged_in}}
-                <a href="/profile">profile</a> |
-                <button class="no-button" id="logout">logout</button>
+                <a href="/account">Account</a> |
+                {{!-- <button class="button" id="logout">logout</button> --}}
                 {{else}}
-                {{!-- <a href="/login">login</a> --}}
+                <a href="/register"></a>
                 {{/if}}
             </nav>
         </header>
@@ -54,7 +38,6 @@
 
         <footer>
         </footer>
-    </div>
 
     <!-- Render script for logged in users only -->
     {{#if logged_in}}
