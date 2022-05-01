@@ -3,21 +3,23 @@
         <div class="box2 container">
             <div class="sqaure margin col-6">
                 <div><br>Login</div>
+                <form onsubmit="loginFormHandler(event)">
                 <div class="box3">
                     <div class="form-group">
-                        <p class="text-end"><label for="email-signup">Email:</label>
-                            <input class="form-input" type="text" />
+                        <p class="text-end"><label for="email-login">Email:</label>
+                            <input class="form-input" type="text" name="email-login" />
                         </p>
                     </div>
                     <div class="form-group">
-                        <p class="text-end"><label for="password-signup">Password:</label>
-                            <input class="form-input" type="text" />
+                        <p class="text-end"><label for="password-login">Password:</label>
+                            <input class="form-input" type="text" name="password-login" />
                         </p>
                     </div>
                     <div class="center">
-                        <button><a href="">Submit</a></button>
+                        <input type="submit" value="Submit" /> 
                     </div>
                 </div>
+                </form>
                 <div>
                     <p>Don't have an account? Register here!</p>
                     <button><a href="">Register</a></button>
@@ -31,7 +33,7 @@
         </div>
     </div>
 </main>
-<script src="./js/login.js"></script>
+<script src="/js/login.js"></script>
 </body>
 
 </html>
