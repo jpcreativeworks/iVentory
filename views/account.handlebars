@@ -9,34 +9,44 @@
                             <button>Search</button>
                         </p>
                     </div>
-                    <form>
+                    <form onsubmit="saveData(event)">
                         <h2>New Request:</h2>
                         <div class="form-group">
-                            <p class="text-end"><label for="email-signup">Create an Episodic Title:</label>
-                                <input class="form-input" type="text" />
+                            <p class="text-end"><label for="episodic-title">Create an Episodic Title:</label>
+                                <input class="form-input" name="episodic-title" type="text" />
                             </p>
                         </div>
                         <div class="form-group">
-                            <p class="text-end"><label for="email-signup">Quantity Needed:</label>
-                                <input class="form-input" type="text" />
+                            <p class="text-end"><label for="item">Item:</label>
+                                <input class="form-input" name="item" type="text" />
                             </p>
                         </div>
                         <div class="form-group">
-                            <p class="text-end"><label for="email-signup">Cost of Item:</label>
-                                <input class="form-input" type="text" />
+                            <p class="text-end"><label for="quantity-needed">Quantity Needed:</label>
+                                <input class="form-input" name="quantity-needed" type="text" />
                             </p>
                         </div>
                         <div class="form-group">
-                            <p class="text-end"><label for="email-signup">Dates Requested:</label>
-                                <input class="form-input" type="text" />
+                            <p class="text-end"><label for="cost-of-item">Cost of Item:</label>
+                                <input class="form-input" name="cost-of-item"type="text" />
                             </p>
                         </div>
                         <div class="form-group">
-                            <p class="text-end"><label for="email-signup">Location:</label>
-                                <input class="form-input" type="text" />
+                            <p class="text-end"><label for="start-date">Start Date:</label>
+                                <input class="form-input" name="start-date" type="text" />
                             </p>
                         </div>
-                        <button>Submit</button>
+                        <div class="form-group">
+                            <p class="text-end"><label for="return-date"> Return Date:</label>
+                                <input class="form-input" name="return-date" type="text" />
+                            </p>
+                        </div>
+                        <div class="form-group">
+                            <p class="text-end"><label for="location">Location:</label>
+                                <input class="form-input" name="location" type="text" />
+                            </p>
+                        </div>
+                        <input type="submit" value="Submit">
                     </form>
                 <div>
                     <h1>Welcome!</h1>
@@ -45,7 +55,8 @@
             </div>
         </div>
     </main>
-    <script src="./js/login.js"></script>
+    <script src="/js/login.js"></script>
+    <script src="/js/account.js"></script>
 </body>
 
 </html>
