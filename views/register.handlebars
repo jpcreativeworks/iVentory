@@ -3,41 +3,43 @@
         <div class="box2 container">
             <div class="sqaure margin col-6">
                 <div><br>Login</div>
+                <form onsubmit="signupFormHandler(event)">
                 <div class="box3">
                     <div class="form-group">
                         <p class="text-end"><label for="name-signup">Name:</label>
-                            <input class="form-input" type="text" />
+                            <input class="form-input" name="name-signup" type="text" />
                         </p>
                     </div>
                     <div class="form-group">
                         <p class="text-end"><label for="id-signup">Employee Id:</label>
-                            <input class="form-input" type="text" />
+                            <input class="form-input" type="text" name="id-signup" />
                         </p>
                     </div>
                     <div class="form-group">
                         <p class="text-end"><label for="manager-signup">Manager:</label>
-                            <input class="form-input" type="text" />
+                            <input class="form-input" type="text" name="manager-signup" />
                         </p>
                     </div>
                     <div class="form-group">
                         <p class="text-end"><label for="department-signup">Department:</label>
-                            <input class="form-input" type="text" />
+                            <input class="form-input" type="text" name="department-signup" />
                         </p>
                     </div>
                     <div class="form-group">
                         <p class="text-end"><label for="email-signup">Email:</label>
-                            <input class="form-input" type="text" />
+                            <input class="form-input" type="text" name="email-signup" />
                         </p>
                     </div>
                     <div class="form-group">
                         <p class="text-end"><label for="password-signup">Password:</label>
-                            <input class="form-input" type="text" />
+                            <input class="form-input" type="text" name="password-signup" />
                         </p>
                     </div>
                     <div class="center2">
-                        <button>Submit</button>
+                        <input type="submit" value="Submit">
                     </div>
                 </div>
+                </form>
             </div>
         </div>
         <div class="box2">
@@ -47,7 +49,8 @@
         </div>
     </div>
 </main>
-<script src="./js/login.js"></script>
+<script src="/js/login.js"></script>
+<script src="/js/register.js"></script>
 </body>
 
 </html>

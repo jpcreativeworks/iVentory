@@ -25,7 +25,7 @@
                 <!-- Conditionally render login or logout links -->
                 {{#if logged_in}}
                 <a href="/account">Account</a> |
-                {{!-- <button class="button" id="logout">logout</button> --}}
+                <a href="/#" onclick="logoutHandler(event)">Logout</a>
                 {{else}}
                 <a href="/register"></a>
                 {{/if}}
