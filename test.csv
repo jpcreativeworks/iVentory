@@ -1,9 +1,2 @@
-<<<<<<< HEAD
-name, age, Location
-jenni, 20, tucson
-rami, 20, canada
-=======
-"name","age"
-"Jenn",20
-"Smith",20
->>>>>>> origin
+"epsiodicTitle","item","quantity","costOfItem","startDates","returndate","location"
+"Testing Show","lamp","1","100","","",""
