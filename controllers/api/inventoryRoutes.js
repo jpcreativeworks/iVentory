@@ -3,6 +3,7 @@ const { Inventory } = require('../../models');
 const withAuth = require('../../utils/auth');
 //var for search
 const { Op } = require("sequelize");
+const { stringify } = require('querystring');
 
 router.post('/', withAuth, async (req, res) => { //pass
   try {
@@ -39,23 +40,25 @@ router.delete('/:id', withAuth, async (req, res) => {
 //search route 
 // the withAuth middleware was removed from here temporarily for testing.
 // When the App is completed with working login, then we will have a session and then
-// we can re-insert this middleware there. 
-router.get("/search", async(req, res) =>{
+// we can re-insert this middleware there. may need to change this back to get
+router.post("/search", async(req, res) =>{
   try{
-  const search = await Inventory.findAll({
-    where: {
-     "item_title": {
-           [Op.like]:`%${req.body.title}%`
+    const search = await Inventory.findAll({    
+      where: {
+        "item_title": {
+              [Op.like]:`%${req.body.title}%`
+        }
      }
-     }
-   });
+    });
 
     if (!search) {
       res.status(404).json({"error":"not found"});
       return;
     }
 
-    res.status(200).json(search);
+    // res.status(200).json(search);
+    console.log(search);
+    res.send(JSON.stringify(search));
 
   } catch(err) {
     res.status(500).json(err);

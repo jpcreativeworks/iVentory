@@ -27,9 +27,36 @@ const saveData = (event) => {
            'Content-Type':'application/json',
        },
        body: JSON.stringify(data)
-   }).then(result => {
-       return result.json();
-   }).then(rs=>{
+   }).then(response => response.json())
+     .then(rs=>{
        console.log(rs);
+   }).catch(err => {
+       console.log(err);
    });
 };
+//search input
+var searchButton = document.getElementById('search-button');
+
+searchButton.addEventListener('click', () => {
+    var searchInput = document.getElementById('search-input').value;
+    var data = {
+        "title": searchInput
+    }
+    fetch('http://localhost:8080/api/inventories/search/', {
+       method:'POST',
+       mode:'cors',
+       headers: {
+           'Accept':'application/json',
+           'Content-Type':'application/json',
+       },
+       body: JSON.stringify(data)
+    }).then(result => {
+        console.log('result', result);
+        return result.text();
+    }).then(rs=>{
+        console.log(rs);
+        console.log(rs.split('},{'));
+        var searchResults = document.getElementById('search-results');
+        searchResults.innerHTML = rs;
+    });
+});

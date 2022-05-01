@@ -5,8 +5,8 @@
                     <h1>iVentory</h1>
                     <div class="form-group">
                         <p class="text-end"><label for="email-signup">Search our Database by Item:</label>
-                            <input class="form-input" type="text" />
-                            <button>Search</button>
+                            <input id="search-input" class="form-input" type="text" />
+                            <button id="search-button">Search</button>
                         </p>
                     </div>
                     <form onsubmit="saveData(event)">
@@ -16,6 +16,7 @@
                                 <input class="form-input" name="episodic-title" type="text" />
                             </p>
                         </div>
+                        <div id="search-results"></div>
                         <div class="form-group">
                             <p class="text-end"><label for="item">Item:</label>
                                 <input class="form-input" name="item" type="text" />
