@@ -12,7 +12,7 @@ body {
     flex-direction: row; 
     flex-wrap: wrap;
     text-align: center;
-    margin-top: -43px;
+    margin-top: -50px;
 }
 .box2 {
     width: 600px;
@@ -20,22 +20,24 @@ body {
     flex-wrap: wrap;
 }
 .box3{
-    margin-right: 50px;
+    margin-top: 30px;
+    margin-right: 25px;
     text-align: right;
 }
 .sqaure {
     border-color: gray;
     border-style: solid;
-    margin: 225px 150px 150px 50px;
+    margin: 225px 150px 150px -150px;
     border-radius: 25px;
     padding: 20px;
     text-align: center;
 }
 .margin {
-    margin-left: 90px;
+    margin-left: -50px;
 }
 .center {
-    margin-right: 74px;
+    margin-right: 58px;
+    margin-bottom: 50px;
 }
 .center2 {
     margin-right: 80px;
@@ -43,8 +45,9 @@ body {
 img {
     width: 1100px;
     height: auto;
-    text-align: right;
+    text-align: left;
     border-radius: 50px;
     background-position: left top;
     padding: 25px;
+    margin-left: -400px;
 }
