@@ -1,63 +1,80 @@
 <main>
-        <div class="row">
-            <div class="container">
-                <div>
+      <div class="box1">
+            <div class="box4">
+                <div class="sqaure2">
                     <h1>iVentory</h1>
                     <div class="form-group">
                         <p class="text-end"><label for="email-signup">Search our Database by Item:</label>
-                            <input id="search-input" class="form-input" type="text" />
-                            <button id="search-button">Search</button>
+                            <input class="form-input" type="text" />
+                            <button>Search</button>
                         </p>
                     </div>
-                    <form onsubmit="saveData(event)">
+                </div>
+            </div>
+        </div>
+        <div class="box1 row">
+            <div class="box5 container">
+                <div class="sqaure3 col-6">
+                    <form class="box3">
                         <h2>New Request:</h2>
                         <div class="form-group">
-                            <p class="text-end"><label for="episodic-title">Create an Episodic Title:</label>
-                                <input class="form-input" name="episodic-title" type="text" />
-                            </p>
-                        </div>
-                        <div id="search-results"></div>
-                        <div class="form-group">
-                            <p class="text-end"><label for="item">Item:</label>
-                                <input class="form-input" name="item" type="text" />
+                            <p class="text-end"><label for="email-signup">Create an Episodic
+                                    Title:</label>
+                                <input class="form-input" type="text" />
                             </p>
                         </div>
                         <div class="form-group">
-                            <p class="text-end"><label for="quantity-needed">Quantity Needed:</label>
-                                <input class="form-input" name="quantity-needed" type="text" />
+                            <p class="text-end"><label for="quantity">Quantity Needed:</label>
+                                <input class="form-input" type="text" />
                             </p>
                         </div>
                         <div class="form-group">
-                            <p class="text-end"><label for="cost-of-item">Cost of Item:</label>
-                                <input class="form-input" name="cost-of-item"type="text" />
+                            <p class="text-end"><label for="cost">Cost of Item:</label>
+                                <input class="form-input" type="text" />
                             </p>
                         </div>
                         <div class="form-group">
-                            <p class="text-end"><label for="start-date">Start Date:</label>
-                                <input class="form-input" name="start-date" type="text" />
-                            </p>
-                        </div>
-                        <div class="form-group">
-                            <p class="text-end"><label for="return-date"> Return Date:</label>
-                                <input class="form-input" name="return-date" type="text" />
+                            <p class="text-end"><label for="dates">Dates Requested:</label>
+                                <input class="form-input" type="text" />
                             </p>
                         </div>
                         <div class="form-group">
                             <p class="text-end"><label for="location">Location:</label>
-                                <input class="form-input" name="location" type="text" />
+                                <input class="form-input" type="text" />
                             </p>
                         </div>
-                        <input type="submit" value="Submit">
+                        <button>Submit</button>
                     </form>
-                <div>
+                </div>
+            </div>
+            <div class="box2">
+                <div class="sqaure2 col-6">
                     <h1>Welcome!</h1>
                     <h2>Instructions:</h2>
-                    <p>Click create to request movie equipment.</p>
+                    <p>Search a specific item you are looking for.</p>
+                    <p>Or create a new request by filling out the form and submiting it.</p>
+                    <p>Pending requests will be saved to the page for you to view.</p>
+                </div>
+            </div>
+        </div>
+        <div class="box6 row">
+            <div class="box5 container">
+                <div class="sqaure3 col-6">
+                    <div class="box3">
+                        <h2>Pending Request:</h2>
+                        <p></p>
+                    </div>
+                </div>
+            </div>
+            <div class="box2">
+                <div class="sqaure2 col-6">
+                    <h2></h2>
+                    <p></p>
+                </div>
             </div>
         </div>
     </main>
-    <script src="/js/login.js"></script>
-    <script src="/js/account.js"></script>
+    <script src="./js/login.js"></script>
 </body>
 
 </html>
